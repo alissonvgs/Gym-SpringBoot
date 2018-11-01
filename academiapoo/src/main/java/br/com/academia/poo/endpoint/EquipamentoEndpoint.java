@@ -61,7 +61,7 @@ public class EquipamentoEndpoint {
 	}
 
 	// metodo post
-	@PostMapping(path = "/cadastrarEquipamento", consumes = MediaType.APPLICATION_JSON_UTF8_VALUE, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+	@PostMapping(consumes = MediaType.APPLICATION_JSON_UTF8_VALUE, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
 	@CrossOrigin(origins="http://localhost:4200/")
 	@ApiOperation(value = "Cadastra um novo equipamento na lista", response = Equipamento.class, notes = "Essa operação salva um novo registro com as informações de um equipamento.")
 	public ResponseEntity<?> saveEquipamento(@RequestBody Equipamento equipamento) {
